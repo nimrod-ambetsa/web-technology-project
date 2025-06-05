@@ -4,6 +4,10 @@ import "./App.css"
 import { Routes, Route, useNavigate } from 'react-router';
 import HireeRegister from './components/HireeRegister';
 import HirerRegister from './components/HirerRegister';
+import HireeLogin from './components/HireeLogin';
+import HirerLogin from './components/HirerLogin';
+import HireeDashboard from './components/HireeDashboard';
+import HirerDashboard from './components/HirerDashboard';
 
 
 function App() {
@@ -17,6 +21,12 @@ function App() {
         <Routes>
           <Route path="/" element={
             <div>
+              <div className="flex justify-end p-4">
+                <div className="space-x-4">
+                  <button className="text-blue-700 font-semibold hover:underline" onClick={() => navigate('/login-hiree')}>Hiree Login</button>
+                  <button className="text-purple-700 font-semibold hover:underline" onClick={() => navigate('/login-hirer')}>Hirer Login</button>
+                </div>
+              </div>
               <div
                 className="relative"
                 style={{
@@ -66,6 +76,10 @@ function App() {
           } />
           <Route path="/register-hiree" element={<HireeRegister />} />
           <Route path="/register-hirer" element={<HirerRegister />} />
+          <Route path="/login-hiree" element={<HireeLogin />} />
+          <Route path="/login-hirer" element={<HirerLogin />} />
+          <Route path="/dashboard-hiree" element={<HireeDashboard />} />
+          <Route path="/dashboard-hirer" element={<HirerDashboard />} />
         </Routes>
       </div>
 

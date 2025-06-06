@@ -4,6 +4,7 @@ const HireeModel = require('../models');
 
 
 exports.register_hiree = async (req, res) => {
+    console.log("Registering hiree with data:", req.body);
     const { firstName, lastName, phoneNumber, skill, experience, location, password } = req.body;
     const hadhedPassword = await bcrypt.hash(password, 10);
 
@@ -18,13 +19,11 @@ exports.register_hiree = async (req, res) => {
             password: hadhedPassword
         }
         await HireeModel.create(hiree_user).then(data => {
-            res.status(201).json({
-                message: "Hiree registered successfully"
-            })
+            res.status(201).send("Hiree registered successfully")
         })
     } catch (error) {
         console.error("Error registering hiree:", error);
-        res.status(500).json({ message: "Internal server error" });
+        res.status(500).send("Internal server error");
     }
 }
 

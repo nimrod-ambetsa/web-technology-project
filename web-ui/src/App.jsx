@@ -20,7 +20,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={
-            <div>
+        <div>
               <div className="flex justify-end p-4">
                 <div className="space-x-4">
                   <button className="text-blue-700 font-semibold hover:underline" onClick={() => navigate('/login-hiree')}>Hiree Login</button>
@@ -38,8 +38,8 @@ function App() {
               >
                 <div className="grid gap-0 justify-evenly items-center h-96 ">
                   <div className="text-3xl font-bold text-slate-800 drop-shadow-lg">
-                    Welcome to Empower Illiter
-                  </div>
+              Welcome to Empower Illiter
+            </div>
                   <div className="flex gap-6 mt-4">
                     <button className="px-6 py-3 rounded-lg bg-white text-blue-700 font-semibold shadow-lg hover:bg-blue-100 transition-all border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400" onClick={() => navigate('/register-hiree')}>
                       List your service
@@ -47,8 +47,8 @@ function App() {
                     <button className="px-6 py-3 rounded-lg bg-blue-700 text-white font-semibold shadow-lg hover:bg-blue-800 transition-all border border-blue-900 focus:outline-none focus:ring-2 focus:ring-purple-400" onClick={() => navigate('/register-hirer')}>
                       Hire a service provider
                     </button>
-                  </div>
-                </div>
+            </div>
+          </div>
               </div>
               <div className="w-full flex flex-col items-center gap-8 py-10 bg-white">
                 <div className="w-11/12 md:w-3/4 max-w-2xl bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-xl p-8 flex flex-col items-center border border-blue-100">
@@ -69,8 +69,8 @@ function App() {
                   </div>
                   <div className="text-slate-700 text-base leading-relaxed text-center">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero voluptate iusto corporis consectetur sed quam laborum ab eos, expedita ad similique consequatur obcaecati, distinctio culpa, cupiditate perferendis dolorum autem sunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero voluptate iusto corporis consectetur sed quam laborum ab eos, expedita ad similique consequatur obcaecati, distinctio culpa, cupiditate perferendis dolorum autem sunt!</p>
-                  </div>
-                </div>
+              </div>
+            </div>
               </div>
             </div>
           } />

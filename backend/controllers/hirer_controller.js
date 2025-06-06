@@ -1,0 +1,2 @@
+const hirerModel = require('../models');
+

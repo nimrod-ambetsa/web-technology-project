@@ -6,8 +6,8 @@
   "description": "A web UI for the project",
   "author": "Nimrod A.",
   "proxy": {
-    "http": "http://localhost:8080",
-    "https": "https://localhost:8080"
+    "http": "http://localhost:8080/",
+    "https": "https://localhost:8080/" 
   },
   "scripts": {
     "dev": "vite",

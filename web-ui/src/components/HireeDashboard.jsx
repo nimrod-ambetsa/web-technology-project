@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 
 export default function HireeDashboard() {
   const navigate = useNavigate();
-  const user = JSON.parse(localStorage.getItem('user'));
+  const user = JSON.parse(localStorage.getItem('hiree'));
   const handleLogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');

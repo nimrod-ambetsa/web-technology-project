@@ -54,8 +54,23 @@ export default function HireeRegister() {
       return;
     }
     setSubmit(true);
-  };
+  }; 
 
+  const resetForm = () => {
+    setForm({
+      firstName: '',
+      lastName: '',
+      phoneNumber: '',
+      skill: '',  
+      experience: '',
+      county: '',
+      password: '',
+      confirmPassword: '',
+      honeypot: '',
+    });
+    setSubmit(false);
+    setError('');
+  };  
   useEffect(() => {
     if (!submit) return;
     const register = async () => {
@@ -110,7 +125,7 @@ export default function HireeRegister() {
       </div>
       <div className="mb-4">
         <label className="block mb-1 font-semibold">Phone Number</label>
-        <input type="text" name='phoneNumber' value={form.phoneNumber} onChange={handleChange} className="w-full border rounded px-3 py-2" required  />
+        <input type="text" name='phoneNumber' value={form.phoneNumber} onChange={handleChange} className="w-full border rounded px-3 py-2" required />
       </div>
       <div className="mb-4">
         <label className="block mb-1 font-semibold">Skill Offered</label>

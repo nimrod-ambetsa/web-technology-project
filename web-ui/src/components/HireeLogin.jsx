@@ -18,10 +18,10 @@ export default function HireeLogin() {
     if (form.honeypot) return;
     setLoading(true);
     try {
-      const res = await fetch('/api/login-hiree', {
+      const res = await fetch('/api/hiree/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ phone: form.phone, password: form.password })
+        body: JSON.stringify({ phoneNumber: form.phoneNumber, password: form.password })
       });
       if (!res.ok) throw new Error('Invalid credentials');
       const data = await res.json();
@@ -46,7 +46,7 @@ export default function HireeLogin() {
       <input type="text" name="honeypot" value={form.honeypot} onChange={handleChange} className="hidden" tabIndex="-1" autoComplete="off" />
       <div className="mb-4">
         <label className="block mb-1 font-semibold">Phone Number</label>
-        <input name="phone" value={form.phone} onChange={handleChange} className="w-full border rounded px-3 py-2" required pattern="[0-9]{10,15}" />
+        <input name="phoneNumber" value={form.phoneNumber} onChange={handleChange} type='text' className="w-full border rounded px-3 py-2" required pattern="[0-9]{10,15}" />
       </div>
       <div className="mb-6">
         <label className="block mb-1 font-semibold">Password</label>

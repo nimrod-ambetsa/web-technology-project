@@ -51,7 +51,7 @@ export default function HirerDashboard() {
   return (
     <div className="max-w-7xl mx-auto bg-white rounded-xl shadow-lg p-8 mt-10">
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-bold text-purple-700">Welcome, {user?.firstName || 'User'}!</h2>
+        <h2 className="text-2xl font-bold text-slate-900">Welcome, {user?.firstName || 'User'}!</h2>
         <button onClick={handleLogout} className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 font-semibold">Logout</button>
       </div>
       <div className="mb-6 flex flex-wrap gap-4 items-end">
@@ -117,7 +117,7 @@ export default function HirerDashboard() {
                 <td className="py-2 px-3 border">{h.county}</td>
                 <td className="py-2 px-3 border">{h.phoneNumber || h.phone}</td>
                 <td className="py-2 px-3 border">
-                  <button onClick={() => window.alert(`Contact: ${h.phoneNumber || h.phone}`)} className="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">Contact</button>
+                  <button onClick={() => window.alert(`Contact: ${h.phoneNumber || h.phone}`)} className="bg-slate-900 text-white px-3 py-1 rounded hover:cursor-pointer hover:bg-slate-800">Contact</button>
                 </td>
               </tr>
             ))}

@@ -75,3 +75,5 @@ exports.get_all_hirees = async (req, res) => {
         res.status(500).json({ message: "Internal server error" });
     }
 }
+
+exports.get_gigs = async (req, res) => {}

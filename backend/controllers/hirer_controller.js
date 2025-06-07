@@ -1,4 +1,6 @@
-const hirerModel = require('../models');
+const { sequelize } = require('../models');
+const { DataTypes } = require('sequelize');
+const hirerModel = require('../models/hirer')(sequelize,DataTypes);
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 

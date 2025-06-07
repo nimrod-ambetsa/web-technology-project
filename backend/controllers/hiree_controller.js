@@ -1,6 +1,8 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const HireeModel = require('../models');
+const { sequelize } = require('../models');
+const { DataTypes } = require('sequelize');
+const HireeModel = require('../models/hiree')(sequelize, DataTypes);
 
 
 exports.register_hiree = async (req, res) => {

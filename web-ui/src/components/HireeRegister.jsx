@@ -51,6 +51,7 @@ export default function HireeRegister() {
     }
     setSubmit(true);
   };
+    console.log(form)
 
   useEffect(() => {
     if (!submit) return;

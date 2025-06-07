@@ -49,9 +49,12 @@ export default function HireeRegister() {
       setError('Please fill in all fields.');
       return;
     }
+    if (form.password !== form.confirmPassword) {
+      setError('Passwords do not match.');
+      return;
+    }
     setSubmit(true);
   };
-    console.log(form)
 
   useEffect(() => {
     if (!submit) return;

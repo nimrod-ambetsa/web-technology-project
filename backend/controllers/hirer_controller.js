@@ -28,6 +28,9 @@ exports.register_hirer = async (req, res) => {
 
 exports.login_hirer = async (req, res) => {
     const { email, password } = req.body;
+    if (!email || !password) {
+        return res.status(400).json({ message: "Email and password are required" });
+    }
 
     try {
         const hirer = await hirerModel.findOne({ where: { email } });

@@ -63,3 +63,15 @@ exports.logout_hiree = (req, res) => {
     // Invalidate the token on the client side by removing it from storage
     res.status(200).json({ message: "Logout successful" });
 }
+
+exports.get_all_hirees = async (req, res) => {
+    try {
+        const hirees = await HireeModel.findAll({
+            attributes: { exclude: ['password'] }
+        });
+        res.status(200).json(hirees);
+    } catch (error) {
+        console.error("Error fetching hirees:", error);
+        res.status(500).json({ message: "Internal server error" });
+    }
+}
